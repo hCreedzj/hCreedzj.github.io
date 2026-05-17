@@ -7,84 +7,59 @@
         <link rel="stylesheet" href="styles/style.css">
     </head>
 
-    <body>
-        <header>
-            <a href="'#">Logo</a>
-            <nav>
-                <a href="'#">Мероприятия</a>
-                <a href="'#">Блог</a>
-                <a href="'#">О нас</a>
-                <a href="'#">Контакты</a>
+    <body class="body">
+        <header class="page-header">
+            <a class="page-header__logo" href="'#">Logo</a>
+            <nav class="page-header__nav">
+                <a class="page-header__nav-link" href="'#">Мероприятия</a>
+                <a class="page-header__nav-link" href="'#">Блог</a>
+                <a class="page-header__nav-link" href="'#">О нас</a>
+                <a class="page-header__nav-link" href="'#">Контакты</a>
             </nav>
-            <a href="#">Войти</a>
+            <a class="page-header__userlink" href="#">Войти</a>
         </header>
-        <main>
-            <header>
-                <h1>АРТ - ПРОСТРАНСТВО</h1>
-            </header>
-            <section>
-                <h2>О нас</h2>
-            </section>
-            <section>
-                <h2>Мероприятия</h2>
-            </section>
-            <section>
-                <h2>Блог</h2>
-            </section>
-            <section>
-                <h2>Контакты</h2>
-            </section>
-        </main>
-        <footer class="footer">
-            <!-- links -->
-            <div class="footer-menu">
-                <ul>
-                    <li><a href="#">Календарь мероприятий</a></li>
-                    <li><a href="#">Провести мероприятие</a></li>
-                    <li><a href="#">Стать арендатором</a></li>
-                    <li><a href="#">Наши проекты</a></li>
-                    <li><a href="#">Контакты</a></li>
-                </ul>
-            </div>
-            <!-- podpiska -->
-            <section class="footer-subscribe">
-                <h2>Подпишись и будь в курсе происходящего</h2>
-
-                <form>
-                    <input type="email" placeholder="Email">
-
-                    <label>
-                        <input type="checkbox">
-                        Согласен на обработку персональных данных
-                    </label>
-
-                    <button type="submit">Подписаться</button>
-                </form>
-            </section>
-            
-            <!-- socials -->
-            <div class="footer-social">
-                <a href="#" aria-label="VK">VK</a>
-                <a href="#" aria-label="VK">VK2</a>
-            </div>
-
-            <!-- legal link -->
-            <div class="footer-legal">
-                <a href="#">Политика конфиденциальности</a>
-                <a href="#">Cookies</a>
-            </div>
-
-            <!-- bottom -->
-             <div class="footer-bottom">
-                <p>
-                    <p>© Millenials 2025</p>
-                </p>
-                <a href="%">
-                    Создание и продвижение
-                    <img src="logo.svg" alt="Comp logo">
-                </a>
-             </div>
+        <main class="main">
+            <div class="home">
+                <header class="main-header home__main-header">
+                    <h1>АРТ - ПРОСТРАНСТВО</h1>
+                    <img />
+                    <p>ДЛЯ ЛЮДЕЙ, ГОРЯЩИХ СЕРДЦЕМ И ДЕЛОМ<br>
+                        МЕСТО ДЛЯ НАСТОЯЩЕГО</p>
+                </header>
                 
-        </footer>
+                <section class="offers home__offers">
+                    <h4 class="offers__title">Я хочу</h4>
+                    <div class="offers__btns">
+                        <button class="offers__btns btn btn--red" type="button">Провести мероприятие</button>
+                        <button class="offers__btns btn" type="button">Стать арендатором</button>
+                    </div>
+                </section>
+
+                <section class="about home__about">
+                    <h2 class="about__section-title section-title">О нас</h2>
+                    <div class="about__container"></div>
+                </section>
+
+                <section class="upcoming home__upcoming">
+                    <h2 class="upcoming__section-title section-title">Мероприятия</h2>
+                    <div class="upcoming__container"></div>
+                </section>
+
+                <section class="listing home__listing">
+                    <h2 class="listing__section-title section-title">Блог</h2>
+                    <div class="listing__container"></div>
+                </section>
+
+                <section class="contacts home__contacts">
+                    <h2 class="contacts__section-title section-title">Контакты</h2>
+                    <div class="contacts__container"></div>
+                </section>
+
+                <div class="doit"></div>
+            </div>
+        </main>
+
+        <footer></footer>
+    
     </body>
 </html>
