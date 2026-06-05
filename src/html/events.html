@@ -1,37 +1,10 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-    <head>
-        <meta charset="UTF-8" />
-        <title>Lenni - events</title>
-        
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@400, 500;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" 
-            rel="stylesheet">
-        <link rel="stylesheet" href="styles/style.css">
-        
-    </head>
+    @@include('blocks/head.html')
 
     <body class="body">
-        <header class="page-header">
-            <div class="page-header__container">
-                <a class="page-header__logo" href="#">
-                    <img class="page-header__logo-icon" src="images/logo.svg" alt="logo"/>
-                </a>
-                <nav class="page-header__nav">
-                    <a class="page-header__nav-link" href="'#">Мероприятия</a>
-                    <a class="page-header__nav-link" href="'#">Блог</a>
-                    <a class="page-header__nav-link" href="'#">О нас</a>
-                    <a class="page-header__nav-link" href="'#">Контакты</a>
-                </nav>
-                <div class="page-header__right-block">
-                    <a class="page-header__userlink btn" href="#">Войти</a>
-                </div>
-                
-            </div>
-            
-        </header>
+        @@include('blocks/page-header.html')
 
         <main class="main">
             <div class="events">
@@ -115,9 +88,7 @@
             </div>
         </main>
 
-        <footer class="page-footer">
-            footer here
-        </footer>
+        @@include('blocks/page-footer.html')
     
     </body>
 </html>
