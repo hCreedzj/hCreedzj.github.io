@@ -1,0 +1,33 @@
+.about {
+  &__container {
+    .container();
+  }
+  &__block2 {
+    display: grid;
+    grid-template-columns: 1fr 406px;
+    gap: 90px 65px;
+    grid-template-areas:
+      "pic pic2"
+      "title pic2"
+      "text text";
+  }
+  &__picture {
+    grid-area: pic;
+  }
+  &__title {
+    grid-area: title;
+    margin: 10px 0 0;
+    font-size: 44px;
+    font-weight: 700;
+  }
+  &__picture2 {
+    grid-area: pic2;
+    align-self: flex-end;
+  }
+  &__text {
+    grid-area: text;
+    margin: 0 80px 0 auto;
+    max-width: 870px;
+    width: 100%;
+  }
+}

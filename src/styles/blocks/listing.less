@@ -1,0 +1,30 @@
+.listing {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1414px;
+  margin: 0 auto;
+  padding-left: 40px;
+  padding-right: 40px;
+
+  &__events-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__event-card {
+    margin-right: 58px;
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+  &__events-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -29px -120px;
+  }
+  &__event-card {
+    width: calc(33.3333% - 58px);
+    margin: 0 29px 120px;
+  }
+}
