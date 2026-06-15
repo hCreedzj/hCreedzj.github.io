@@ -38,7 +38,7 @@ const resourses = {
         //"src/assets/audio/**/*.{mp3,ogg,wav,aac}",
         //"src/json/**/*.json",
         //"src/php/**/*.php"
-    ]
+    ],
 };
 
 function clean(done) {
@@ -80,12 +80,12 @@ function js() {
     return gulp
         .src("src/scripts/dev/*.js")
         .pipe(plumber())
-        .pipe(
-            include({
-                prefix: "//@@",
-                basepath: "@@file"
-            })
-        )
+        // .pipe(
+        //     include({
+        //         prefix: "//@@",
+        //         basepath: "@@file"
+        //     })
+        // )
         .pipe(gulp.dest("dist/scripts"))
         .pipe(terser())
         .pipe(

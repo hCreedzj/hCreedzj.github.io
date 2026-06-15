@@ -1,62 +1,63 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
+  @@include('blocks/head.html')
 
-    @@include('blocks/head.html')
+  <body class="body">
+    @@include('blocks/page-header.html')
 
-    <body class="body">
-        @@include('blocks/page-header.html')
+    <main class="main">
+      <div class="home">
+        <header class="main-header home__main-header">
+          <h1 class="main-header__title">АРТ - ПРОСТРАНСТВО</h1>
+          <img class="main-header__img" src="/assets/images/LENNI.png" />
+          <p class="main-header__text">
+            ДЛЯ ЛЮДЕЙ, ГОРЯЩИХ СЕРДЦЕМ И ДЕЛОМ<br />
+            МЕСТО ДЛЯ НАСТОЯЩЕГО
+          </p>
+        </header>
 
-        <main class="main">
-            <div class="home">
-                <header class="main-header home__main-header">
-                    <h1 class="main-header__title">АРТ - ПРОСТРАНСТВО</h1>
-                    <img class="main-header__img" src="images/LENNI.png"/>
-                    <p class="main-header__text">ДЛЯ ЛЮДЕЙ, ГОРЯЩИХ СЕРДЦЕМ И ДЕЛОМ<br>
-                        МЕСТО ДЛЯ НАСТОЯЩЕГО</p>
-                </header>
-                
-                <section class="offers home__offers">
-                    <h4 class="offers__title">Я хочу:</h4>
-                    <div class="offers__btns">
-                        <button class="offers__btns btn btn--red" type="button">Провести мероприятие</button>
-                        <button class="offers__btns btn" type="button">Стать арендатором</button>
-                    </div>
-                </section>
+        <section class="offers home__offers">
+          <h4 class="offers__title">Я хочу:</h4>
+          <div class="offers__btns">
+            <button class="offers__btns btn btn--red" type="button">
+              Провести мероприятие
+            </button>
+            <button class="offers__btns btn" type="button">
+              Стать арендатором
+            </button>
+          </div>
+        </section>
 
-                <section class="about home__about">
-                    <h2 class="about__section-title section-title">О нас</h2>
-                    <div class="about__container">
-                        <p class="about__container-text">
-                             Проект «Millennials» 
-                            </p>
-                        <p class="about__container-text2">Вдохновлен молодыми идейными людьми, увлеченными творчеством, 
-                            эмоциями и желанием сделать мир лучше, проявить себя. 
-                            У них есть талант и стремление, у нас возможность помочь им воплотить их мечту в реальность. 
-                        </p> 
-                    </div>
-                </section>
+        <section class="about home__about">
+          <h2 class="about__section-title section-title">О нас</h2>
+          <div class="about__container">
+            <p class="about__container-text">Проект «Millennials»</p>
+            <p class="about__container-text2">
+              Вдохновлен молодыми идейными людьми, увлеченными творчеством,
+              эмоциями и желанием сделать мир лучше, проявить себя. У них есть
+              талант и стремление, у нас возможность помочь им воплотить их
+              мечту в реальность.
+            </p>
+          </div>
+        </section>
 
-                <section class="upcoming home__upcoming">
-                    <h2 class="upcoming__section-title section-title">Мероприятия</h2>
-                    <div class="upcoming__container"></div>
-                </section>
+        <section class="upcoming home__upcoming">
+          <h2 class="upcoming__section-title section-title">Мероприятия</h2>
+          <div class="upcoming__container"></div>
+        </section>
 
-                <section class="listing home__listing">
-                    <h2 class="listing__section-title section-title">Блог</h2>
-                    <div class="listing__container"></div>
-                </section>
+        <!-- prettier-ignore -->
+        @@include('blocks/blog-listing.html', {"class": "home__listing"})
 
-                <section class="contacts home__contacts">
-                    <h2 class="contacts__section-title section-title">Контакты</h2>
-                    <div class="contacts__container"></div>
-                </section>
-                <div class="doit">
-                    DO IT DIV
-                </div>
-            </div>
-        </main>
+        <section class="contacts home__contacts">
+          <h2 class="contacts__section-title section-title">Контакты</h2>
+          <div class="contacts__container"></div>
+        </section>
 
-        @@include('blocks/page-footer.html')
-    
-    </body>
+      </div>
+      
+    </main>
+
+    @@include('blocks/page-footer.html')
+  </body>
 </html>

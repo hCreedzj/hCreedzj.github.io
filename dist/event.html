@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 
 <head>
@@ -8,21 +8,21 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@400, 500;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/styles.min.css">
 
 </head>
 
 <body class="body">
   <header class="page-header">
     <div class="page-header__container">
-      <a href="#" class="page-header__logo">
+      <a href="index.html" class="page-header__logo">
         <svg class="page-header__logo-icon" width="202" height="147">
           <use xlink:href="assets/icons/symbols.svg#logo">
         </svg>
       </a>
       <nav class="page-header__nav">
-        <a class="page-header__nav-link" href="'#">Мероприятия</a>
-        <a class="page-header__nav-link" href="'#">Блог</a>
+        <a class="page-header__nav-link" href="events.html">Мероприятия</a>
+        <a class="page-header__nav-link" href="event.html">Блог</a>
         <a class="page-header__nav-link" href="'#">О нас</a>
         <a class="page-header__nav-link" href="'#">Контакты</a>
       </nav>
@@ -36,28 +36,21 @@
   <main class="main">
     <!-- Здесь будут хлебные крошки -->
 
+
     <article class="event">
       <!-- Здесь пропущенное содержимое страницы -->
-
-      <form class="reserve event__reserve">
-        <div class="reserve__checks">
-          Чекбоксы
-        </div>
-        <div class="reserve__scheme">
-          Схема столов
-        </div>
-        <div class="reserve__order">
-          Оформление заказа
-        </div>
-        <div class="reserve__legend">
-          Легенда
-        </div>
-      </form>
+      <div class="event__container">
+        <form class="reserve event__reserve">
+          <div class="reserve__checks">Чекбоксы</div>
+          <div class="reserve__scheme">Схема столов</div>
+          <div class="reserve__order">Оформление заказа</div>
+          <div class="reserve__legend">Легенда</div>
+        </form>
+      </div>
     </article>
   </main>
 
   <footer class="page-footer">footer here</footer>
-
 
 </body>
 
