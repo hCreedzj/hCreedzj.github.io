@@ -1,0 +1,51 @@
+.radio {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+  &__item {
+    //margin-bottom: 15px; //альтернатива gap
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 23px;
+    padding-left: 45px;
+    color: @black;
+    cursor: pointer;
+    //&:last-child {  //альтернатива gap
+    //margin-bottom: 0;
+    //}
+  }
+  &__input {
+  .is-hidden();
+  &:checked {
+    & ~ .radio__mark {
+      background-color: @black;
+    }
+  }
+}
+  &__mark {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    border: 2px solid @black;
+    padding: 3px;
+    background-clip: content-box;
+    background-color: transparent;
+    transition: background-color 0.2s;
+  }
+  &__label {
+    
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.375;
+    
+  }
+  }
+

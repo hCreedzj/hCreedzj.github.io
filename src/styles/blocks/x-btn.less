@@ -1,0 +1,21 @@
+.x-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  border: none;
+  padding: 0;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: @black;
+  transition: background-color 0.2s;
+  &:hover,
+  &:active {
+    background-color: @red;
+  }
+  &__icon {
+    color: @white;
+    pointer-events: none;
+  }
+}

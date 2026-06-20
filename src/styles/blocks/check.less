@@ -1,0 +1,51 @@
+.check {
+  box-sizing: border-box;
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 24px;
+  padding-left: 40px;
+  padding-top: 2px;
+  color: @black;
+  cursor: pointer;
+  &__input {
+    .is-hidden();
+    &:checked {
+      & ~ .check__mark {
+        background-color: @black;
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          width: 6px;
+          height: 12px;
+          left: 7px;
+          top: 2px;
+          border-bottom: 2px solid @white;
+          border-right: 2px solid @white;
+          transform: rotate(45deg);
+        }
+      }
+    }
+  }
+  &__mark {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    border: 1px solid @black;
+    transition: background-color 0.2s;
+  }
+  &__label {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.375;
+    &fz--14 {
+      font-size: 14px;
+    }
+  }
+}
