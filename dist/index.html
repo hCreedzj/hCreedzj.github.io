@@ -1,23 +1,24 @@
 <!DOCTYPE html>
-<html lang="ru" class="show-event-popup">
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
   <title>Lenni - main</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@400, 500;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles/styles.min.css">
-
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@400, 500;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/styles.min.css" />
 </head>
+
 
 <body class="body">
   <header class="page-header">
     <div class="page-header__container">
       <a href="index.html" class="page-header__logo">
-        <svg class="page-header__logo-icon" width="202" height="147">
-          <use xlink:href="assets/icons/symbols.svg#logo">
+        <svg class="page-header__logo-icon" viewBox="0 0 202 147">
+          <use xlink:href="assets/icons/symbols.svg#logo" />
         </svg>
       </a>
       <nav class="page-header__nav">
@@ -25,9 +26,24 @@
         <a class="page-header__nav-link" href="event.html">Блог</a>
         <a class="page-header__nav-link" href="'#">О нас</a>
         <a class="page-header__nav-link" href="'#">Контакты</a>
+        <div class="page-header__nav-user">
+          <a href="#" class="page-header__nav-user-link">Константин М.</a>
+          <a href="#" class="page-header__nav-logout">
+            <svg class="page-header__logout-icon" width="24" height="24">
+              <use xlink:href="assets/icons/symbols.svg#logout" />
+            </svg>
+          </a>
+        </div>
       </nav>
       <div class="page-header__right-block">
-        <a class="page-header__userlink btn" href="#">Войти</a>
+        <a class="page-header__btn" href="#">Войти
+          <svg class="page-header__user-icon" width="24" height="24">
+            <use xlink:href="assets/icons/symbols.svg#user">
+          </svg>
+        </a>
+        <button type="button" class="page-header__nav-toggle">
+
+        </button>
       </div>
     </div>
   </header>
@@ -64,13 +80,54 @@
         <div class="about__container">
           <p class="about__container-text">Проект «Millennials»</p>
           <p class="about__container-text2">
-            Вдохновлен молодыми идейными людьми, увлеченными творчеством,
-            эмоциями и желанием сделать мир лучше, проявить себя. У них есть
-            талант и стремление, у нас возможность помочь им воплотить их
-            мечту в реальность.
+            Вдохновлен молодыми идейными людьми, увлеченными творчеством, эмоциями и
+            желанием сделать мир лучше, проявить себя. У них есть талант и стремление,
+            у нас возможность помочь им воплотить их мечту в реальность.
           </p>
         </div>
+
+        <div class="about__container2">
+          <div class="about__picture">
+            <img src="assets/images/about/about_pic1.png" alt="Концерт" class="about__picture-img" />
+          </div>
+
+          <div class="about__picture2">
+            <img src="assets/images/about/about_pic2.png" alt="Выставка" class="about__picture2-img" />
+          </div>
+
+          <h2 class="about__title">
+            Мы предоставляем площади для вашего мероприятия
+          </h2>
+          <p class="about__text">
+            И оказываем помощь с организацией, если вам это нужно.
+            <br />
+            Наша цель: вовлечь в культурную жизнь города как можно больше людей,
+            помочь молодым ребятам сделать первые шаги к своей мечте и рассказать всем
+            о том, что их волнует.
+          </p>
+
+          <div class="about__picture3">
+            <img class="about__picture3-img" src="assets/images/about/about_pic3.png" alt="Атриум" />
+          </div>
+
+          <div class="about__content">
+            <p class="about__text">
+              Мы уже успешно организовали и провели более 100 проектов.
+              <br />
+              Посмотрите, как это было классно.
+            </p>
+            <a href="#" class="about__link">
+              Смотреть
+              <span class="arrow">
+                <svg class="arrow__icon" width="91" height="60">
+                  <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+                </svg>
+              </span>
+            </a>
+          </div>
+        </div>
       </section>
+
 
       <section class="upcoming home__upcoming">
         <h2 class="upcoming__section-title section-title">Мероприятия</h2>
@@ -84,81 +141,85 @@
         </h2>
         <div class="listing__article-list">
           <!-- prettier-ignore -->
-          <article class="article-card" card1>
+          <article class="article-card" listing__article-card>
             <a href="#" class="article-card__link">
               <picture class="article-card__picture">
+                <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/blog-listing/theatre.webp" />
+                <source media="(max-width: 450px)" srcset="assets/images/blog-listing/theatre.png" />
+
+                <source type="image/webp" media="(max-width: 1169px)" srcset="assets/images/blog-listing/theatre_tablet.webp" />
+                <source media="(max-width: 1169px)" srcset="assets/images/blog-listing/theatre_tablet.jpg" />
+
+                <source type="image/webp" srcset="assets/images/blog-listing/theatre.webp" />
                 <img src="assets/images/blog-listing/theatre.png" alt="Theatre" class="article-card__img" />
               </picture>
             </a>
             <div class="article-card__info">
-              <time datetime="2024-11-26T00:00" class="article-card__time">
-                26.11.2024
-              </time>
+              <time datetime="2024-11-26T00:00" class="article-card__time"> 26.11.2024 </time>
               <a href="#" class="article-card__title-link">
-                <h4 class="article-card__title">
-                  Фотосессия в стенах Театра драмы
-                </h4>
+                <h4 class="article-card__title">Фотосессия в стенах Театра драмы</h4>
                 <span class="article-card__arrow arrow">
                   <svg class="arrow__icon" width="91" height="60">
                     <use xlink:href="assets/icons/symbols.svg#arrow"></use>
                   </svg>
                 </span>
               </a>
-              <p class="article-card__description">
-                Организовывая фотосессию для локального бренда одежды мы смогли воплотить все пожелания заказчика и у нас получилась отличная работа. Смотрите как это было
-              </p>
+              <p class="article-card__description">Организовывая фотосессию для локального бренда одежды мы смогли воплотить все пожелания заказчика и у нас получилась отличная работа. Смотрите как это было </p>
             </div>
           </article>
-          <article class="article-card" card2>
+          <article class="article-card" listing__article-card>
             <a href="#" class="article-card__link">
               <picture class="article-card__picture">
+                <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/blog-listing/vr.webp" />
+                <source media="(max-width: 450px)" srcset="assets/images/blog-listing/vr.png" />
+
+                <source type="image/webp" media="(max-width: 1169px)" srcset="assets/images/blog-listing/vr_tablet.webp" />
+                <source media="(max-width: 1169px)" srcset="assets/images/blog-listing/vr_tablet.jpg" />
+
+                <source type="image/webp" srcset="assets/images/blog-listing/vr.webp" />
                 <img src="assets/images/blog-listing/vr.png" alt="VR" class="article-card__img" />
               </picture>
             </a>
             <div class="article-card__info">
-              <time datetime="2024-11-05T00:00" class="article-card__time">
-                05.11.2024
-              </time>
+              <time datetime="2024-11-05T00:00" class="article-card__time"> 05.11.2024 </time>
               <a href="#" class="article-card__title-link">
-                <h4 class="article-card__title">
-                  Выставка VR в Томске
-                </h4>
+                <h4 class="article-card__title">Выставка VR в Томске</h4>
                 <span class="article-card__arrow arrow">
                   <svg class="arrow__icon" width="91" height="60">
                     <use xlink:href="assets/icons/symbols.svg#arrow"></use>
                   </svg>
                 </span>
               </a>
-              <p class="article-card__description">
-                Клуб виртуальной реальности - это другие миры. яркие эмоции. новый опыт. ... Мы предоставляем нашим клиентам лучший игровой VR-опыт в Томске.
-              </p>
+              <p class="article-card__description">Клуб виртуальной реальности - это другие миры. яркие эмоции. новый опыт. ... Мы предоставляем нашим клиентам лучший игровой VR-опыт в Томске.</p>
             </div>
           </article>
-          <article class="article-card" card3>
+          <article class="article-card" listing__article-card>
             <a href="#" class="article-card__link">
               <picture class="article-card__picture">
+                <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/blog-listing/rockingradio.webp" />
+                <source media="(max-width: 450px)" srcset="assets/images/blog-listing/rockingradio.png" />
+
+                <source type="image/webp" media="(max-width: 1169px)" srcset="assets/images/blog-listing/rockingradio_tablet.webp" />
+                <source media="(max-width: 1169px)" srcset="assets/images/blog-listing/rockingradio_tablet.jpg" />
+
+                <source type="image/webp" srcset="assets/images/blog-listing/rockingradio.webp" />
                 <img src="assets/images/blog-listing/rockingradio.png" alt="Rocking Radio" class="article-card__img" />
               </picture>
             </a>
             <div class="article-card__info">
-              <time datetime="2024-11-02T00:00" class="article-card__time">
-                01.11.2024
-              </time>
+              <time datetime="2024-11-02T00:00" class="article-card__time"> 01.11.2024 </time>
               <a href="#" class="article-card__title-link">
-                <h4 class="article-card__title">
-                  Rocking radio в заброшенном ангаре
-                </h4>
+                <h4 class="article-card__title">Rocking radio в заброшенном ангаре</h4>
                 <span class="article-card__arrow arrow">
                   <svg class="arrow__icon" width="91" height="60">
                     <use xlink:href="assets/icons/symbols.svg#arrow"></use>
                   </svg>
                 </span>
               </a>
-              <p class="article-card__description">
-                15 электрогенераторов, километры проводов и пару тонн света. Все это для того, чтобы организовать лучшую вечеринку года для ребят из Новосибирска.
-              </p>
+              <p class="article-card__description">15 электрогенераторов, километры проводов и пару тонн света. Все это для того, чтобы организовать лучшую вечеринку года для ребят из Новосибирска.</p>
             </div>
           </article>
+
         </div>
         <a href="#" class="listing__link link">
           Смотреть все
@@ -258,17 +319,17 @@
           <div class="form__list">
             <label class="field form__field form__field--w50">
               <span class="field__label">Имя*</span>
-              <input class="field__input" type="text" name="name" placeholder="Введите ваше Имя" required />
+              <input class="field__input" type="text" name="name" placeholder="Имя" required />
             </label>
 
             <label class="field form__field form__field--w50">
               <span class="field__label">Фамилия*</span>
-              <input class="field__input" type="text" name="surname" placeholder="Введите вашу Фамилию" required />
+              <input class="field__input" type="text" name="surname" placeholder="Фамилия" required />
             </label>
 
             <label class="field form__field form__field--w50">
               <span class="field__label">Телефон*</span>
-              <input class="field__input" type="tel" name="phone" placeholder="+7 (__) ___ __ __" required />
+              <input class="field__input" type="tel" name="phone" placeholder="Телефон" required />
             </label>
 
             <label class="field form__field form__field--w50">

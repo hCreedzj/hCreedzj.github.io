@@ -52,15 +52,30 @@
     font-size: 24px;
     line-height: 33px;
     text-decoration: underline transparent;
-    transition:
-      color 0.2s,
-      text-decoration-color 0.2s;
+    transition: color 0.2s, text-decoration-color 0.2s;
+    @media @bw1660 {
+      margin: 0 0 10px;
+    }
+    @media @bw1340 {
+      min-height: 54px;
+      font-size: 20px;
+      line-height: 27px;
+    }
+    @media @bw768 {
+      font-size: 16px;
+      min-height: 45px;
+      line-height: 22px;
+    }
   }
 
   &__description {
     margin: 0 0 auto;
     font-size: 16px;
-    line-height: 19px;
+    line-height: 22px;
+    @media @bw768 {
+      font-size: 14px;
+      line-height: 19px;
+    }
   }
 
   &__time {

@@ -4,17 +4,53 @@
   left: 0;
   width: 100%;
   height: 147px;
-  background-color: rgba(222, 222, 222, 0.5);
-  backdrop-filter: blur(20px);
+
   z-index: 100;
+  @media @bw1660 {
+    height: 111px;
+  }
+  @media @bw768 {
+    height: 70px;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(222, 222, 222, 0.5);
+    backdrop-filter: blur(20px);
+  }
   &__container {
     .container();
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
   }
   &__logo {
     width: 202px;
     height: 147px;
     font-size: 0;
     text-decoration: none;
+
+    @media @bw1660 {
+      width: 152px;
+      height: 111px;
+    }
+    @media @bw1660 {
+      z-index: 1;
+    }
+    @media @bw768 {
+      position: relative;
+      width: 96px;
+      height: 70px;
+      left: -20px;
+    }
   }
 
   &__logo-icon {
@@ -28,6 +64,21 @@
     align-items: baseline;
     margin: 0 auto;
     gap: 50px;
+    @media @bw1020 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+
+      flex-direction: column;
+      padding: 211px 30px 30px;
+      overflow-x: hidden;
+      overflow-y: auto;
+      background-color: rgba(222, 222, 222, 0.5);
+      backdrop-filter: blur(20px);
+      transform: translateX(-100%);
+    }
   }
 
   &__nav-link {
@@ -37,6 +88,11 @@
     line-height: 1.38;
     text-decoration: none;
     transition: color 0.2s;
+    @media @bw1020 {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 1.375;
+    }
   }
 
   &__nav-link:hover {
@@ -48,5 +104,115 @@
     justify-content: flex-end;
     align-items: center;
     width: 202px;
+
+    @media @bw1660 {
+      width: 152px;
+    }
+    @media @bw1020 {
+      width: auto;
+      margin-left: auto;
+      gap: 30px;
+      z-index: 1;
+    }
+    @media @bw768 {
+      width: auto;
+      margin-left: auto;
+      gap: 13px;
+    }
+  }
+
+  &__btn {
+    display: inline-flex;
+    box-sizing: border-box;
+    padding: 15px 40px;
+    border: 1px solid @black;
+    text-decoration: none;
+    background-color: transparent;
+    outline: none;
+    color: @black;
+    font-family: @fontOS;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.375;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    cursor: pointer;
+    transition:
+      background-color 0.2s,
+      color 0.2s,
+      border-color 0.2s;
+    @media @bw1020 {
+      width: 40px;
+      height: 40px;
+      padding: 0;
+      border: none;
+      font-size: 0;
+    }
+    &:hover,
+    &:active {
+      background-color: @black;
+      color: #ffffff;
+    }
+  }
+  &__user-icon {
+    display: none;
+    @media @bw1020 {
+      display: block;
+      margin: auto;
+    }
+  }
+  &__nav-toggle {
+    display: none;
+    @media @bw1020 {
+      display: block;
+      position: relative;
+      right: -11px;
+      width: 40px;
+      height: 40px;
+      border: none;
+      background-color: transparent;
+    }
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 19px;
+      left: 11px;
+      width: 18px;
+      height: 2px;
+      border-radius: 2px;
+      background-color: @black;
+      transform-origin: 50% 50%;
+    }
+    &::before {
+      top: 13px;
+      box-shadow: 0 6px 0 @black;
+    }
+    &::after {
+      top: 25px;
+    }
+  }
+  &__nav-user {
+    display: none;
+    @media @bw1020 {
+      margin-top: 20px;
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+  }
+  &__nav-user-link {
+    text-decoration: none;
+  }
+  &__nav-logout {
+    font-size: 0;
+    display: flex;
+    align-items: center;
+  }
+  &__logout-icon {
+    width: 24px;
+    height: 24px;
   }
 }

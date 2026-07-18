@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
   @@include('blocks/head.html')
 
@@ -7,16 +7,293 @@
 
     <main class="main">
       <!-- Здесь будут хлебные крошки -->
-      
 
       <article class="event">
-        <!-- Здесь пропущенное содержимое страницы -->
         <div class="event__container">
+          <div class="event__header">
+            <div class="event__breadcrumbs">
+              <a href="/" class="event__breadcrumbs-link">Главная</a>
+              <span class="event__breadcrumbs-separator">/</span>
+              <a href="#" class="event__breadcrumbs-link">Мероприятия</a>
+              <span class="event__breadcrumbs-separator">/</span>
+              <a href="#" class="event__breadcrumbs-link">Вечер</a>
+              <span class="event__breadcrumbs-separator">/</span>
+              <span class="event__breadcrumbs-current">The Best of Sade</span>
+            </div>
+
+            <h1 class="event__title">Вечер | The Best of Sade</h1>
+
+            <div class="event__info">
+              <div class="event__meta event__meta--left">
+                <span class="event__date">16/12/2024</span>
+                <span class="event__place">Кафе «Птичка»</span>
+              </div>
+
+              <div class="event__poster">
+                <img
+                  class="event__poster-img"
+                  src="/assets/images/events/sade.png"
+                  alt="The Best of Sade"
+                />
+              </div>
+
+              <div class="event__meta event__meta--right">
+                <span class="event__time">
+                  20.00 <span class="event__time-label">начало</span>
+                </span>
+                <span class="event__address">Ленина 10 | 2 этаж</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="event__content content">
+            <h5>Программа мероприятия</h5>
+
+            <ul>
+              <li>20:15 — Приветствие гостей</li>
+              <li>20:30 — Первая подача блюд | Салаты</li>
+              <li>20:40 — Живой вокал | Композиции 1-3</li>
+              <li>21:20 — Подача горячих блюд</li>
+              <li>21:30 — Живой вокал | Композиции 4-7</li>
+              <li>22:15 — Подача десерта</li>
+              <li>22:30 — Живой вокал | Композиции 8-9</li>
+              <li>23:00 — Завершение вечера</li>
+            </ul>
+
+            <h5>The Best Of Sade</h5>
+
+            <p>
+              Первый альбом-компиляция Sade, выпущенный в 1994 году. Он содержит
+              9 треков, включая самые популярные хиты группы, раритеты и их
+              любимые треки.
+            </p>
+            <p>
+              Группа продемонстрировала необычайное долголетие и креативность
+              своей творческой карьеры. Она лидировала музыкальных чартах с 1994
+              по 1995 год, став четырехкратно платиновой в США и продав более 2
+              миллионов копий в Европе.
+            </p>
+
+            <ol>
+              <li>Your Love Is King</li>
+              <li>Hang On To Your Love</li>
+              <li>Smooth Operator</li>
+              <li>Jezebel</li>
+              <li>The Sweetest Taboo</li>
+              <li>Is It A Crime</li>
+              <li>Never As Good As The First Time</li>
+              <li>Love Is Stronger Than Pride</li>
+              <li>Paradise</li>
+            </ol>
+          </div>
+
+          <!-- Форма бронирования -->
           <form class="reserve event__reserve">
-            <div class="reserve__checks">Чекбоксы</div>
-            <div class="reserve__scheme">Схема столов</div>
-            <div class="reserve__order">Оформление заказа</div>
-            <div class="reserve__legend">Легенда</div>
+            <!-- Левая верхняя часть -->
+            <div class="reserve__checks">
+              <h5 class="reserve__checks-title">Забронировать столик</h5>
+
+              <div class="reserve__checks-list">
+                <label class="check reserve__check reserve__check--selected">
+                  <input
+                    class="check__input"
+                    type="checkbox"
+                    name="table"
+                    value="1"
+                  />
+                  <span class="check__mark"></span>
+                  <span class="check__label check__label--fz-16"> 1 стол </span>
+                </label>
+
+                <label class="check reserve__check reserve__check--reserved">
+                  <input
+                    class="check__input"
+                    type="checkbox"
+                    name="table"
+                    value="1"
+                  />
+                  <span class="check__mark"></span>
+                  <span class="check__label check__label--fz-16"> 2 стол </span>
+                </label>
+
+                <label class="check reserve__check">
+                  <input
+                    class="check__input"
+                    type="checkbox"
+                    name="table"
+                    value="1"
+                  />
+                  <span class="check__mark"></span>
+                  <span class="check__label check__label--fz-16"> 3 стол </span>
+                </label>
+
+                <label class="check reserve__check">
+                  <input
+                    class="check__input"
+                    type="checkbox"
+                    name="table"
+                    value="1"
+                  />
+                  <span class="check__mark"></span>
+                  <span class="check__label check__label--fz-16"> 4 стол </span>
+                </label>
+
+                <label class="check reserve__check">
+                  <input
+                    class="check__input"
+                    type="checkbox"
+                    name="table"
+                    value="1"
+                  />
+                  <span class="check__mark"></span>
+                  <span class="check__label check__label--fz-16"> 5 стол </span>
+                </label>
+
+                <label class="check reserve__check">
+                  <input
+                    class="check__input"
+                    type="checkbox"
+                    name="table"
+                    value="1"
+                  />
+                  <span class="check__mark"></span>
+                  <span class="check__label check__label--fz-16"> 6 стол </span>
+                </label>
+
+                <label class="check reserve__check">
+                  <input
+                    class="check__input"
+                    type="checkbox"
+                    name="table"
+                    value="1"
+                  />
+                  <span class="check__mark"></span>
+                  <span class="check__label check__label--fz-16"> 7 стол </span>
+                </label>
+
+                <label class="check reserve__check">
+                  <input
+                    class="check__input"
+                    type="checkbox"
+                    name="table"
+                    value="1"
+                  />
+                  <span class="check__mark"></span>
+                  <span class="check__label check__label--fz-16"> 8 стол </span>
+                </label>
+
+                <label class="check reserve__check">
+                  <input
+                    class="check__input"
+                    type="checkbox"
+                    name="table"
+                    value="1"
+                  />
+                  <span class="check__mark"></span>
+                  <span class="check__label check__label--fz-16"> 9 стол </span>
+                </label>
+
+                <label class="check reserve__check">
+                  <input
+                    class="check__input"
+                    type="checkbox"
+                    name="table"
+                    value="1"
+                  />
+                  <span class="check__mark"></span>
+                  <span class="check__label check__label--fz-16">
+                    10 стол
+                  </span>
+                </label>
+
+                <label class="check reserve__check">
+                  <input
+                    class="check__input"
+                    type="checkbox"
+                    name="table"
+                    value="1"
+                  />
+                  <span class="check__mark"></span>
+                  <span class="check__label check__label--fz-16">
+                    11 стол
+                  </span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Правая верхняя часть -->
+            <div class="reserve__scheme">
+              <div class="reserve__scene">
+                <h4 class="reserve-title section-title--reserve">Сцена</h2>
+              </div>
+
+              <div class="reserve__map">
+                @@include('blocks/scene.html')
+              </div>
+            </div>
+
+            <!-- Левая нижняя часть -->
+            <div class="reserve__order">
+              <div class="reserve__tickets">
+                <h5 class="reserve__tickets-title">
+                  Ваши пригласительные билеты
+                </h5>
+
+                <div class="reserve__ticket">
+                  <span>9 шт. | 1400 ₽</span>
+                  <span class="reserve__ticket-price">12 600 ₽</span>
+                </div>
+
+                <div class="reserve__ticket">
+                  <span>4 шт. | 1250 ₽</span>
+                  <span class="reserve__ticket-price">5 000 ₽</span>
+                </div>
+              </div>
+
+              <div class="reserve__total">
+                <span class="reserve__total-label"> Сумма </span>
+
+                <span class="reserve__total-value"> 17 600 ₽ </span>
+              </div>
+
+              <button class="btn btn--red reserve__submit" type="submit">
+                Купить билеты
+              </button>
+            </div>
+
+            <!-- Правая нижняя часть -->
+            <div class="reserve__legend">
+              <div class="reserve__price">
+                <h5 class="reserve__price-title">
+                  Стоимость пригласительного билета
+                </h5>
+                <div class="reserve__price-item reserve__price-item--red">
+                  1400 ₽ | 1 персона
+                </div>
+                <div class="reserve__price-item reserve__price-item--black">
+                  1250 ₽ | 1 персона
+                </div>
+              </div>
+
+              <div class="reserve__note">
+                <h5 class="reserve__note-title">Примечание</h5>
+                <div class="legend">
+                  <div class="legend__item legend__item--available">
+                    <div class="legend__icon-wrap">
+                      <span class="legend__icon"></span>
+                      <span class="legend__icon-inner"></span>
+                    </div>
+                    Доступные места
+                  </div>
+                  <div class="legend__item legend__item--reserved">
+                    <div class="legend__icon-wrap">
+                      <span class="legend__icon"></span>
+                    </div>
+                    Забронировано
+                  </div>
+                </div>
+              </div>
+            </div>
           </form>
         </div>
       </article>

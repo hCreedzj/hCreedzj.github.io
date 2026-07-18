@@ -1,25 +1,26 @@
 <article class="article-card" @@class>
-    <a href="#" class="article-card__link">
-        <picture class="article-card__picture">
-            <img src="@@img" alt="@@alt" class="article-card__img"/>
-        </picture>
+  <a href="#" class="article-card__link">
+    <picture class="article-card__picture">
+      <source media="(max-width: 450px)" type="image/webp" srcset="@@img__webp"/>
+      <source media="(max-width: 450px)" srcset="@@img"/>
+
+      <source type="image/webp" media="(max-width: 1169px)" srcset="@@img__tablet_webp"/>
+      <source media="(max-width: 1169px)" srcset="@@img__tablet"/>
+
+      <source type="image/webp" srcset="@@img__webp"/>
+      <img src="@@img" alt="@@alt" class="article-card__img" />
+    </picture>
+  </a>
+  <div class="article-card__info">
+    <time datetime="@@datetime" class="article-card__time"> @@time </time>
+    <a href="#" class="article-card__title-link">
+      <h4 class="article-card__title">@@title</h4>
+      <span class="article-card__arrow arrow">
+        <svg class="arrow__icon" width="91" height="60">
+          <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+        </svg>
+      </span>
     </a>
-    <div class="article-card__info">
-        <time datetime="@@datetime" class="article-card__time">
-            @@time
-        </time>
-        <a href="#" class="article-card__title-link">
-            <h4 class="article-card__title">
-                @@title
-            </h4>
-            <span class="article-card__arrow arrow">
-                <svg class="arrow__icon" width="91" height="60">
-                    <use xlink:href="assets/icons/symbols.svg#arrow"></use>
-                </svg>
-            </span>
-        </a>
-        <p class="article-card__description">
-            @@descr
-        </p>
-    </div> 
+    <p class="article-card__description">@@descr</p>
+  </div>
 </article>

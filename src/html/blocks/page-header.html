@@ -1,8 +1,8 @@
 <header class="page-header">
   <div class="page-header__container">
     <a href="index.html" class="page-header__logo">
-      <svg class="page-header__logo-icon" width="202" height="147">
-        <use xlink:href="assets/icons/symbols.svg#logo">
+      <svg class="page-header__logo-icon" viewBox="0 0 202 147">
+        <use xlink:href="assets/icons/symbols.svg#logo"/>
       </svg>
     </a>
     <nav class="page-header__nav">
@@ -10,9 +10,24 @@
       <a class="page-header__nav-link" href="event.html">Блог</a>
       <a class="page-header__nav-link" href="'#">О нас</a>
       <a class="page-header__nav-link" href="'#">Контакты</a>
+      <div class="page-header__nav-user">
+        <a href="#" class="page-header__nav-user-link">Константин М.</a>
+        <a href="#" class="page-header__nav-logout">
+          <svg class="page-header__logout-icon" width="24" height="24">
+            <use xlink:href="assets/icons/symbols.svg#logout"/>
+          </svg>
+        </a>
+      </div>
     </nav>
     <div class="page-header__right-block">
-      <a class="page-header__userlink btn" href="#">Войти</a>
+      <a class="page-header__btn" href="#">Войти
+        <svg class="page-header__user-icon" width="24" height="24">
+          <use xlink:href="assets/icons/symbols.svg#user">
+        </svg>
+      </a>
+      <button type="button" class="page-header__nav-toggle">
+
+      </button>
     </div>
   </div>
 </header>

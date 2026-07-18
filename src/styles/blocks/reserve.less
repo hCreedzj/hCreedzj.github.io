@@ -1,25 +1,238 @@
 .reserve {
   display: grid;
   gap: 65px 11%;
-  grid-template-columns: 405px calc(89% - 405px);
+  grid-template-columns: 405px 1fr;
   grid-template-areas:
     "checks scheme"
     "order legend";
   width: 100%;
+  @media @bw1340 {
+    grid-template-columns: 340px 1fr;
+    gap: 65px 6.5%;
+  }
+  @media @bw1020 {
+    gap: 60px;
+    grid-template-columns: 1fr 390px;
+
+    grid-template-areas:
+      "scheme scheme"
+      "checks legend"
+      "checks order";
+  }
+  @media @bw768 {
+    grid-template-columns: 100%;
+    grid-template-areas:
+      "scheme"
+      "legend"
+      "checks"
+      "order";
+  }
+
   &__checks {
     grid-area: checks;
-    background-color: yellow;
+    width: fit-content;
   }
+
+  &__checks-title {
+    margin: 0 0 25px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 25px;
+    @media @bw768 {
+      font-size: 16px;
+    }
+  }
+
+  &__checks-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__check {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 14px;
+    line-height: 19px;
+    cursor: pointer;
+  }
+
   &__scheme {
     grid-area: scheme;
-    background-color: rgb(255, 162, 0);
   }
+
   &__order {
     grid-area: order;
-    background-color: rgb(76, 0, 255);
   }
+
+  &__tickets {
+    margin-bottom: 30px;
+  }
+
+  &__tickets-title {
+    margin: 0 0 20px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.388;
+    @media @bw768 {
+      font-size: 16px;
+    }
+  }
+
+  &__ticket {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.375;
+    @media @bw768 {
+      font-size: 14px;
+    }
+
+    &-price {
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 1.388;
+      @media @bw768 {
+        font-size: 16px;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__total {
+    display: flex;
+    max-width: 405px;
+    width: 100%;
+    gap: 33px;
+    margin-bottom: 55px;
+    @media @bw768 {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &__total-label {
+    width: 50%;
+    text-align: right;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.35;
+    @media @bw768 {
+      font-size: 18px;
+    }
+  }
+
+  &__total-value {
+    width: 50%;
+    text-align: left;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.35;
+    @media @bw768 {
+      font-size: 18px;
+    }
+  }
+
+  &__submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 405px;
+    min-height: 52px;
+    border: none;
+    background-color: @red;
+    color: @white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: @red_dark;
+    }
+    @media @bw768 {
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 14px;
+    }
+  }
+
   &__legend {
     grid-area: legend;
-    background-color: rgb(255, 0, 81);
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    align-items: flex-end;
+    margin-left: auto;
+    @media @bw768 {
+      align-items: flex-start;
+      margin-left: 0;
+    }
+  }
+
+  &__price,
+  &__note {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    @media @bw768 {
+      align-items: flex-start;
+    }
+  }
+
+  &__price-title,
+  &__note-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+    @media @bw768 {
+      font-size: 16px;
+    }
+  }
+
+  &__price-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 15px;
+    width: fit-content;
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+    }
+
+    &--red::before {
+      background: @red;
+    }
+
+    &--black::before {
+      background: @black;
+    }
+  }
+  &__scene {
+    display: flex;
+    justify-content: center;
+  }
+  &__map {
+    width: 100%;
+    overflow: hidden;
   }
 }

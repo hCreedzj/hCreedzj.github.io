@@ -44,8 +44,14 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 1.375;
-    &fz--14 {
+    &--fz-14 {
       font-size: 14px;
+    }
+    &--fz-16 {
+      font-size: 16px;
+      @media @bw768 {
+        font-size: 14px;
+      }
     }
   }
 }

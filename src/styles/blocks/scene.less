@@ -1,0 +1,33 @@
+.scene {
+  width: 100%;
+  height: auto;
+  &__table-group {
+    rect {
+      fill: none;
+    }
+  }
+
+  &__table--selected {
+    .scene__table-group rect {
+      fill: @black;
+    }
+    &.scene__table--red .scene__table-group rect,
+    &.scene__table--red .scene__table-group circle {
+      fill: @red;
+    }
+    .scene__table-num {
+      fill: @white;
+    }
+  }
+
+  &__table--reserved {
+    .scene__table-group rect,
+    .scene__table-group circle {
+      fill: @black-disabled;
+      stroke: @black-disabled;
+    }
+    .scene__table-num {
+      fill: @white;
+    }
+  }
+}
