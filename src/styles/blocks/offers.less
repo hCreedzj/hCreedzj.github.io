@@ -29,9 +29,14 @@
   &__btns {
     display: flex;
     gap: 106px;
-    @media @bw670 {
+    @media @bw1340 {
+      gap: 60px;
+    }
+    @media @bw600 {
       flex-direction: column;
       gap: 25px;
+      
+      width: 100%;
     }
   }
 }

@@ -3,7 +3,6 @@
   &__container {
     display: flex;
     flex-direction: column;
-    
 
     &-text {
       margin: 0 0 50px;
@@ -12,37 +11,106 @@
       font-size: 44px;
       font-weight: 700;
       line-height: 1.363;
+      @media @bw1020 {
+        font-size: 32px;
+        margin: 0 0 50px;
+      }
+      @media @bw852 {
+        font-size: 26px;
+        margin: 0 0 50px;
+      }
+      @media @bw450 {
+        font-size: 18px;
+        margin: 0 0 30px;
+      }
     }
 
     &-text2 {
       align-self: flex-end;
       max-width: 865px;
       margin: 0 0 100px;
-
       font-family: @fontOS;
       font-size: 18px;
       font-weight: 400;
       line-height: 1.388;
+      @media @bw1020 {
+        
+        margin-bottom: 90px;
+        max-width: none;
+        margin-left: 80px;
+      }
+      @media @bw852 {
+        margin-bottom: 85px;
+        font-size: 16px;
+      }
+      @media @bw768 {
+        margin-bottom: 80px;
+      }
+      @media @bw670 {
+        margin-bottom: 60px;
+      }
+      @media @bw450 {
+      }
     }
   }
   &__container2 {
-    .container();
     display: grid;
-    grid-template-columns: 1fr 406px;
-    gap: 90px 65px;
+    grid-template-columns: 1fr 30.46%;
+    gap: 100px 60px;
     margin-bottom: 210px;
     grid-template-areas:
       "pic pic2"
       "title pic2"
       "text text"
       "pic3 content";
+
+    @media @bw1340 {
+      gap: 52px 30px;
+    }
+    @media @bw1170 {
+      gap: 52px 30px;
+    }
+    @media @bw1020 {
+      grid-template-columns: 1fr 36.52%;
+      grid-template-areas:
+        "pic pic"
+        "title pic2"
+        "text pic2"
+        "pic3 pic3"
+        "content content";
+    }
+    @media @bw670 {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "pic"
+        "title"
+        "text"
+        "pic2"
+        "pic3"
+        "content";
+    }
   }
   &__picture {
     grid-area: pic;
+    &-img {
+      @media @bw1020 {
+        width: 100%;
+      }
+    }
   }
   &__picture2 {
     grid-area: pic2;
     align-self: flex-end;
+    @media @bw670 {
+      text-align: right;
+    }
+    &-img {
+      @media @bw670 {
+        max-width: 350px;
+        width: 100%;
+      }
+    }
+
   }
   &__picture3 {
     grid-area: pic3;
@@ -76,11 +144,21 @@
     margin: 10px 0 0;
     font-size: 44px;
     font-weight: 700;
+    line-height: 1.346;
+    @media @bw1020 {
+      font-size: 32px;
+    }
+    @media @bw852 {
+      font-size: 26px;
+    }
+    @media @bw450 {
+      font-size: 18px;
+    }
   }
 
   &__text {
     grid-area: text;
-    margin: 0 80px 0 auto;
+    margin: 0 clamp(0px, calc(13.793vw - 184.828px), 80px) 0 auto;
     max-width: 870px;
     width: 100%;
 
@@ -88,6 +166,10 @@
     font-size: 18px;
     font-weight: 400;
     line-height: 1.388;
+    @media @bw1020 {
+      font-size: 16px;
+      max-width: 600px;
+    }
   }
   &__content {
     grid-area: content;

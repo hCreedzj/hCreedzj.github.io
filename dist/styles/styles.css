@@ -1007,16 +1007,9 @@ textarea {
   line-height: 1.388;
 }
 .about__container2 {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  width: 100%;
-  max-width: 1414px;
-  margin: 0 auto;
-  padding-left: 40px;
-  padding-right: 40px;
   display: grid;
-  grid-template-columns: 1fr 406px;
-  gap: 90px 65px;
+  grid-template-columns: 1fr 30.46%;
+  gap: 100px 60px;
   margin-bottom: 210px;
   grid-template-areas: "pic pic2" "title pic2" "text text" "pic3 content";
 }
@@ -1057,10 +1050,11 @@ textarea {
   margin: 10px 0 0;
   font-size: 44px;
   font-weight: 700;
+  line-height: 1.346;
 }
 .about__text {
   grid-area: text;
-  margin: 0 80px 0 auto;
+  margin: 0 clamp(0px, calc(13.793vw - 184.828px), 80px) 0 auto;
   max-width: 870px;
   width: 100%;
   font-family: "Open Sans", sans-serif;
@@ -2110,13 +2104,15 @@ textarea {
     padding-left: 30px;
     padding-right: 30px;
   }
+  .offers__btns {
+    gap: 60px;
+  }
   .about {
     padding-left: 30px;
     padding-right: 30px;
   }
   .about__container2 {
-    padding-left: 30px;
-    padding-right: 30px;
+    gap: 52px 30px;
   }
   .reserve {
     grid-template-columns: 340px 1fr;
@@ -2145,6 +2141,9 @@ textarea {
   }
 }
 @media (max-width: 1169px) {
+  .about__container2 {
+    gap: 52px 30px;
+  }
   .listing__link {
     max-width: 708px;
     width: 100%;
@@ -2247,6 +2246,29 @@ textarea {
   .offers__title {
     font-size: 16px;
   }
+  .about__container-text {
+    font-size: 32px;
+    margin: 0 0 50px;
+  }
+  .about__container-text2 {
+    margin-bottom: 90px;
+    max-width: none;
+    margin-left: 80px;
+  }
+  .about__container2 {
+    grid-template-columns: 1fr 36.52%;
+    grid-template-areas: "pic pic" "title pic2" "text pic2" "pic3 pic3" "content content";
+  }
+  .about__picture-img {
+    width: 100%;
+  }
+  .about__title {
+    font-size: 32px;
+  }
+  .about__text {
+    font-size: 16px;
+    max-width: 600px;
+  }
   .reserve {
     gap: 60px;
     grid-template-columns: 1fr 390px;
@@ -2274,6 +2296,19 @@ textarea {
   .event__place,
   .event__address {
     font-size: 12px;
+  }
+}
+@media (max-width: 851px) {
+  .about__container-text {
+    font-size: 26px;
+    margin: 0 0 50px;
+  }
+  .about__container-text2 {
+    margin-bottom: 85px;
+    font-size: 16px;
+  }
+  .about__title {
+    font-size: 26px;
   }
 }
 @media (max-width: 767px) {
@@ -2443,9 +2478,8 @@ textarea {
     padding-left: 20px;
     padding-right: 20px;
   }
-  .about__container2 {
-    padding-left: 20px;
-    padding-right: 20px;
+  .about__container-text2 {
+    margin-bottom: 80px;
   }
   .reserve {
     grid-template-columns: 100%;
@@ -2547,12 +2581,19 @@ textarea {
   .offers {
     margin-bottom: 100px;
   }
-  .offers__btns {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    gap: 25px;
+  .about__container-text2 {
+    margin-bottom: 60px;
+  }
+  .about__container2 {
+    grid-template-columns: 1fr;
+    grid-template-areas: "pic" "title" "text" "pic2" "pic3" "content";
+  }
+  .about__picture2 {
+    text-align: right;
+  }
+  .about__picture2-img {
+    max-width: 350px;
+    width: 100%;
   }
   .listing__events-list {
     gap: 60px 0;
@@ -2578,6 +2619,14 @@ textarea {
   .section-title {
     font-size: 16px;
   }
+  .offers__btns {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 25px;
+    width: 100%;
+  }
   .event__title {
     font-size: 30px;
   }
@@ -2595,6 +2644,13 @@ textarea {
   }
   .main-header__text {
     font-size: 13px;
+  }
+  .about__container-text {
+    font-size: 18px;
+    margin: 0 0 30px;
+  }
+  .about__title {
+    font-size: 18px;
   }
   .event__title {
     font-size: 20px;

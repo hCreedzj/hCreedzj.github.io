@@ -73,8 +73,15 @@
               <span class="event__place">Кафе «Птичка»</span>
             </div>
 
+
             <div class="event__poster">
-              <img class="event__poster-img" src="/assets/images/events/sade.png" alt="The Best of Sade" />
+              <picture>
+                <source type="image/webp" media="(max-width: 768px)" srcset="/assets/images/events/sade_mobile.webp" />
+                <source media="(max-width: 768px)" srcset="/assets/images/events/sade_mobile.png" />
+
+                <source type="image/webp" srcset="/assets/images/events/sade.webp" />
+                <img src="/assets/images/events/sade.png" alt="The Best of Sade" class="event__poster-img" />
+              </picture>
             </div>
 
             <div class="event__meta event__meta--right">

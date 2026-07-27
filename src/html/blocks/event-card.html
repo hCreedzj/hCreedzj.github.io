@@ -2,8 +2,14 @@
   <a href="#" class="event-card__link">
 
     <picture class="event-card__picture">
-      <img src="@@img" alt="@@alt" class="event-card__img" 
-      />
+      <source type="image/webp" media="(max-width: 669px)" srcset="@@img__mobile_webp"/>
+      <source media="(max-width: 669px)" srcset="@@img__mobile"/>
+
+      <source type="image/webp" media="(max-width: 1019px)" srcset="@@img__tablet_webp"/>
+      <source media="(max-width: 1019px)" srcset="@@img__tablet"/>
+
+      <source type="image/webp" srcset="@@img__webp"/>
+      <img src="@@img" alt="@@alt" class="event-card__img" />
     </picture>
 
     <h4 class="event-card__title">
