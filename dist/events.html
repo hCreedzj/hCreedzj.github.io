@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
   <title>Lenni - main</title>
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v10.10.0/ol.css" />
+
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@400, 500;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" />
@@ -41,9 +44,7 @@
             <use xlink:href="assets/icons/symbols.svg#user">
           </svg>
         </a>
-        <button type="button" class="page-header__nav-toggle">
-
-        </button>
+        <button type="button" class="page-header__nav-toggle" id="js-navToggle"></button>
       </div>
     </div>
   </header>
@@ -389,11 +390,89 @@
     </section>
   </main>
 
-  <footer class="page-footer">footer here</footer>
-  <div class="pp" id="eventPP">
+  <footer class="footer">
+    <div class="footer__container">
+      <!-- Верхняя часть футера -->
+      <div class="footer__top">
+        <!-- Навигация -->
+        <nav class="footer__nav" aria-label="Навигация в подвале">
+          <a href="#" class="footer__nav-link"> Календарь мероприятий </a>
+
+          <a href="#" class="footer__nav-link"> Провести мероприятие </a>
+
+          <a href="#" class="footer__nav-link"> Стать арендатором </a>
+
+          <a href="#" class="footer__nav-link"> Наши проекты </a>
+
+          <a href="#" class="footer__nav-link"> Контакты </a>
+        </nav>
+
+        <!-- Подписка -->
+        <div class="footer__subscribe">
+          <p class="footer__subscribe-title">
+            Подпишись и будь в курсе происходящего
+          </p>
+
+          <form class="footer__form">
+            <input type="email" class="footer__input" placeholder="Email" aria-label="Ваш Email" />
+
+            <button type="submit" class="footer__button">Подписаться</button>
+          </form>
+
+          <label class="check footer__check">
+            <input class="check__input" type="checkbox" name="personal-data" checked />
+
+            <span class="check__mark"></span>
+
+            <span class="check__label">
+              Согласен на обработку персональных данных
+            </span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Нижняя часть -->
+      <div class="footer__bottom">
+        <!-- Информация -->
+        <div class="footer__info">
+          <div class="footer__copyright">© Millennials 2025</div>
+
+          <div class="footer__links">
+            <a href="#" class="footer__links-policy">
+              Политика конфиденциальности
+            </a>
+
+            <a href="#" class="footer__links-cookies"> Cookies </a>
+          </div>
+        </div>
+
+        <!-- Соцсети -->
+        <div class="footer__socials">
+          <a href="https://vk.ru/" class="footer__social">
+            <img src="assets/images/page-footer/vk.svg" alt="vk group" />
+          </a>
+
+          <a href="https://web.max.ru/" class="footer__social">
+            <img src="assets/images/page-footer/max.svg" alt="max channel" />
+          </a>
+        </div>
+
+        <!-- Разработчик -->
+        <div class="footer__developer">
+          <p class="footer__developer-text">Создание и продвижение</p>
+
+          <a href="https://www.dignity.codes/" class="footer__developer-logo">
+            <img src="assets/images/page-footer/logo.svg" alt="Dignity agency" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="pp" id="js-eventPP">
     <div class="pp__wrapper">
       <div class="pp__sticky-close">
-        <button type="button" class="pp__x-btn x-btn">
+        <button type="button" title="Закрыть" class="pp__x-btn x-btn js-ppCloseBtn">
           <svg class="x-btn__icon" width="24" height="24">
             <use xlink:href="assets/icons/symbols.svg#x">
           </svg>
@@ -443,23 +522,26 @@
                 <span class="field__title">
                   Планируемое количество посетителей:
                 </span>
-                <select name="amount" class="field__select">
+                <select name="amount" class="field__select js-selectric">
                   <option value="20">До 20 человек</option>
                   <option value="100">От 20 до 100 человек</option>
                   <option value="500">От 100 до 500 человек</option>
                   <option value="1000">Более 500 человек</option>
                 </select>
               </label>
-              <div class="field form__field form__field--m0">
+
+              <div class="field form__field form__field--m0 js-dateField">
                 <h5 class="field__title">
                   Дата проведения:
                 </h5>
                 <div class="field__date">
                   <div class="field__date-inputs">
-                    <input class="field__date-input" type="text" placeholder="ДД" />
-                    <input class="field__date-input" type="text" placeholder="ММ" />
-                    <input class="field__date-input field__date-input--year" type="text" placeholder="ГГГГ" />
+                    <input class="field__date-input js-dateDay" type="text" placeholder="ДД" readonly />
+                    <input class="field__date-input js-dateMonth" type="text" placeholder="ММ" readonly />
+                    <input class="field__date-input field__date-input--year js-dateYear" type="text" placeholder="ГГГГ" readonly />
                   </div>
+                  <input class="field__date-picker js-dateInput" type="text" name="date" readonly required />
+                  <div class="field__date-calendar"></div>
                 </div>
               </div>
             </div>
@@ -482,7 +564,7 @@
 
             <label class="field form__field form__field--w50">
               <span class="field__label">Телефон*</span>
-              <input class="field__input" type="tel" name="phone" placeholder="Телефон" required />
+              <input class="field__input js-mobileMask" type="tel" name="phone" placeholder="Телефон" required />
             </label>
 
             <label class="field form__field form__field--w50">
@@ -511,7 +593,7 @@
             <button type="submit" class="btn form__submit">
               Отправить
             </button>
-            <button type="button" class="form__close-btn">
+            <button type="button" class="form__close-btn js-ppCloseBtn">
               Закрыть
             </button>
           </div>
@@ -520,6 +602,14 @@
       </div>
     </div>
   </div>
+
+  <script src="scripts/jquery-3.7.1.min.js"></script>
+
+  <script src="scripts/jquery.selectric.js"></script>
+  <script src="scripts/jquery.mask.js"></script>
+  <script src="scripts/air-datepicker.js"></script>
+
+  <script src="scripts/main.min.js"></script>
 </body>
 
 </html>

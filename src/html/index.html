@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <!-- prettier-ignore -->
   @@include('blocks/head.html')
 
   <body class="body">
+    <!-- prettier-ignore -->
     @@include('blocks/page-header.html')
 
     <main class="main">
@@ -24,7 +26,7 @@
           <h4 class="offers__title">Я хочу:</h4>
 
           <div class="offers__btns">
-            <button class="offers__btn btn btn--red" type="button">
+            <button class="offers__btn btn btn--red" type="button" id="js-eventOpenBtn">
               Провести мероприятие
             </button>
 
@@ -33,27 +35,32 @@
             </button>
           </div>
         </section>
-
-        @@include('blocks/about.html')
-
-        <section class="upcoming home__upcoming">
-          <h2 class="upcoming__section-title section-title">Мероприятия</h2>
-          <div class="upcoming__container"></div>
-        </section>
-
+        <!-- prettier-ignore -->
+        @@include('blocks/about.html', {"class": "home__about"})
+        
+        <!-- prettier-ignore -->
+        @@include('blocks/upcoming.html', {"class": "home__upcoming"})
+        
         <!-- prettier-ignore -->
         @@include('blocks/blog-listing.html', {"class": "home__listing"})
 
-        <section class="contacts home__contacts">
-          <h2 class="contacts__section-title section-title">Контакты</h2>
-          <div class="contacts__container"></div>
-        </section>
+        <!-- prettier-ignore -->
+        @@include('blocks/contacts.html', {"class": "home__contacts"})
 
       </div>
       
     </main>
-
+    
     @@include('blocks/page-footer.html')
     @@include('blocks/event-pp.html')
+    <script src="scripts/jquery-3.7.1.min.js"></script>
+
+    <script src="scripts/jquery.selectric.js"></script>
+    <script src="scripts/jquery.mask.js"></script>
+    <script src="scripts/air-datepicker.js"></script>
+
+    <script src="scripts/swiper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ol@v10.10.0/dist/ol.js"></script>
+    <script src="scripts/main.min.js"></script>
   </body>
 </html>

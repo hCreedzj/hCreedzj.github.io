@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
   <title>Lenni - main</title>
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v10.10.0/ol.css" />
+
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@400, 500;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" />
@@ -41,9 +44,7 @@
             <use xlink:href="assets/icons/symbols.svg#user">
           </svg>
         </a>
-        <button type="button" class="page-header__nav-toggle">
-
-        </button>
+        <button type="button" class="page-header__nav-toggle" id="js-navToggle"></button>
       </div>
     </div>
   </header>
@@ -457,8 +458,90 @@
     </article>
   </main>
 
-  <footer class="page-footer">footer here</footer>
+  <footer class="footer">
+    <div class="footer__container">
+      <!-- Верхняя часть футера -->
+      <div class="footer__top">
+        <!-- Навигация -->
+        <nav class="footer__nav" aria-label="Навигация в подвале">
+          <a href="#" class="footer__nav-link"> Календарь мероприятий </a>
 
+          <a href="#" class="footer__nav-link"> Провести мероприятие </a>
+
+          <a href="#" class="footer__nav-link"> Стать арендатором </a>
+
+          <a href="#" class="footer__nav-link"> Наши проекты </a>
+
+          <a href="#" class="footer__nav-link"> Контакты </a>
+        </nav>
+
+        <!-- Подписка -->
+        <div class="footer__subscribe">
+          <p class="footer__subscribe-title">
+            Подпишись и будь в курсе происходящего
+          </p>
+
+          <form class="footer__form">
+            <input type="email" class="footer__input" placeholder="Email" aria-label="Ваш Email" />
+
+            <button type="submit" class="footer__button">Подписаться</button>
+          </form>
+
+          <label class="check footer__check">
+            <input class="check__input" type="checkbox" name="personal-data" checked />
+
+            <span class="check__mark"></span>
+
+            <span class="check__label">
+              Согласен на обработку персональных данных
+            </span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Нижняя часть -->
+      <div class="footer__bottom">
+        <!-- Информация -->
+        <div class="footer__info">
+          <div class="footer__copyright">© Millennials 2025</div>
+
+          <div class="footer__links">
+            <a href="#" class="footer__links-policy">
+              Политика конфиденциальности
+            </a>
+
+            <a href="#" class="footer__links-cookies"> Cookies </a>
+          </div>
+        </div>
+
+        <!-- Соцсети -->
+        <div class="footer__socials">
+          <a href="https://vk.ru/" class="footer__social">
+            <img src="assets/images/page-footer/vk.svg" alt="vk group" />
+          </a>
+
+          <a href="https://web.max.ru/" class="footer__social">
+            <img src="assets/images/page-footer/max.svg" alt="max channel" />
+          </a>
+        </div>
+
+        <!-- Разработчик -->
+        <div class="footer__developer">
+          <p class="footer__developer-text">Создание и продвижение</p>
+
+          <a href="https://www.dignity.codes/" class="footer__developer-logo">
+            <img src="assets/images/page-footer/logo.svg" alt="Dignity agency" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="scripts/jquery-3.7.1.min.js"></script>
+
+
+  <script src="scripts/main.min.js"></script>
 </body>
 
 </html>

@@ -30,6 +30,8 @@
     "start": "gulp start"
   },
   "dependencies": {
-    "browser-sync": "^3.0.4"
+    "browser-sync": "^3.0.4",
+    "ol": "^10.10.0",
+    "swiper": "^14.1.0"
   }
 }

@@ -41,9 +41,13 @@
   body {
     overflow: hidden;
   }
-  #eventPP {
+  .pp {
     display: flex;
   }
+}
+
+.pp-overflow {
+  overflow: hidden;
 }
 
 .is-hidden {
@@ -59,4 +63,34 @@
   overflow: hidden !important;
   visibility: hidden !important;
   pointer-events: none !important;
+}
+
+
+.show-nav {
+  body {
+    @media @bw1020 {
+      overflow: hidden;
+      
+    }
+  }
+
+  .page-header__nav {
+    @media @bw1020 {
+      transform: translateX(0);
+      transition: transform 0.3s ease;
+    }
+  }
+  
+  .page-header__nav-toggle {
+    &::before {
+      box-shadow: none;
+      transform: translate(0, 6px) rotate(45deg);
+      transition: transform 0.2s ease;
+    }
+    &::after {
+      
+      transform: translate(0, -6px) rotate(-45deg);
+      transition: transform 0.2s ease;
+    }
+  }
 }
