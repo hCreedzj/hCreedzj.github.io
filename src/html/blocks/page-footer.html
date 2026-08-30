@@ -1,5 +1,9 @@
 <footer class="footer">
   <div class="footer__container">
+    <div class="footer__decor">
+      <span class="footer__decor-line"></span>
+      <span class="footer__decor-line"></span>
+    </div>
     <!-- Верхняя часть футера -->
     <div class="footer__top">
       <!-- Навигация -->
@@ -17,35 +21,45 @@
 
       <!-- Подписка -->
       <div class="footer__subscribe">
-        <p class="footer__subscribe-title">
+        <h4 class="footer__subscribe-title">
           Подпишись и будь в курсе происходящего
-        </p>
+        </h4>
 
-        <form class="footer__form">
-          <input
-            type="email"
-            class="footer__input"
-            placeholder="Email"
-            aria-label="Ваш Email"
-          />
+        <form
+          class="footer__form"
+          action="https://jsonplaceholder.typicode.com/posts"
+          id="js-subscribeForm"
+        >
+          <div class="footer__form-wrap">
+            <input
+              type="email"
+              name="email"
+              id="js-subscribeEmail"
+              class="footer__input"
+              placeholder="Email"
+              aria-label="Ваш Email"
+              required
+            />
 
-          <button type="submit" class="footer__button">Подписаться</button>
+            <button type="submit" class="footer__button">Подписаться</button>
+          </div>
+
+          <label class="check footer__check">
+            <input
+              class="check__input"
+              type="checkbox"
+              name="personal-data"
+              required
+              checked
+            />
+
+            <span class="check__mark"></span>
+
+            <span class="check__label">
+              Согласен на обработку персональных данных
+            </span>
+          </label>
         </form>
-
-        <label class="check footer__check">
-          <input
-            class="check__input"
-            type="checkbox"
-            name="personal-data"
-            checked
-          />
-
-          <span class="check__mark"></span>
-
-          <span class="check__label">
-            Согласен на обработку персональных данных
-          </span>
-        </label>
       </div>
     </div>
 
@@ -77,6 +91,7 @@
 
       <!-- Разработчик -->
       <div class="footer__developer">
+        
         <p class="footer__developer-text">Создание и продвижение</p>
 
         <a href="https://www.dignity.codes/" class="footer__developer-logo">

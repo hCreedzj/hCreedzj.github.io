@@ -1,5 +1,14 @@
 .event {
-  padding: 40px 0 150px;
+  padding: 40px 0 155px;
+  @media bw1340 {
+    padding-bottom: 170px;
+  }
+  @media @bw1020 {
+    padding-bottom: 100px;
+  }
+  @media @bw768 {
+    padding-top: 80px;
+  }
 
   &__container {
     .container();

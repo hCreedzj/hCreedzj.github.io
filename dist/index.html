@@ -7,6 +7,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
   <title>Lenni - main</title>
 
+  <meta name="description" content="Арт—пространство для людей, горящих сердец и делом">
+  <meta name="keywords" content="Lenni Art, пространство, мероприятия">
+
+  <meta property="og:title" content="Lenni Art" />
+  <meta property="og:description" content="Арт пространство для людей, горящих сердцем и делом" />
+  <meta property="og:image" content="/assets/images/lenni-logo-202x147.png">
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lenni-art.ru/" />
+
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v10.10.0/ol.css" />
 
 
@@ -14,6 +24,31 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@400, 500;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles/styles.min.css" />
+
+  <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="/assets/favicons/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
+
+  <meta name="msapplication-TileColor" content="#dedede">
+  <meta name="msapplication-TileImage" content="/assets/favicons/ms-icon-144x144.png">
+  <meta name="msapplication-config" content="/assets/favicons/browser-config.xml">
+  <link rel="mask-icon" href="/assets/favicons/safari-pinned-tab.svg" color="#bc3324">
+
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon-180x180.png">
+
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicons/android-icon-192x192.png">
+  <link rel="manifest" href="/assets/favicons/site.webmanifest">
+
+  <meta name="apple-mobile-web-app-title" content="Lenni Art">
+  <meta name="application-name" content="Lenni Art">
+
+  <meta name="theme-color" content="#dedede">
+
+
 </head>
 
 
@@ -28,9 +63,9 @@
       </a>
       <nav class="page-header__nav">
         <a class="page-header__nav-link" href="events.html">Мероприятия</a>
-        <a class="page-header__nav-link" href="event.html">Блог</a>
-        <a class="page-header__nav-link" href="'#">О нас</a>
-        <a class="page-header__nav-link" href="'#">Контакты</a>
+        <a class="page-header__nav-link" href="index.html#blog">Блог</a>
+        <a class="page-header__nav-link" href="index.html#about">О нас</a>
+        <a class="page-header__nav-link" href="index.html#contacts">Контакты</a>
         <div class="page-header__nav-user">
           <a href="#" class="page-header__nav-user-link">Константин М.</a>
           <a href="#" class="page-header__nav-logout">
@@ -78,7 +113,7 @@
         </div>
       </section>
       <!-- prettier-ignore -->
-      <section class="about home__about">
+      <section class="about home__about" id="about">
         <h2 class="about__section-title section-title">О нас</h2>
         <div class="about__container">
           <p class="about__container-text">Проект «Millennials»</p>
@@ -174,7 +209,7 @@
                 </div>
                 <div class="swiper-slide">
                   <!-- prettier-ignore -->
-                  <article class="event-card listing__event-card">
+                  <article class="event-card ">
                     <a href="#" class="event-card__link">
 
                       <picture class="event-card__picture">
@@ -206,7 +241,7 @@
                 </div>
                 <div class="swiper-slide">
                   <!-- prettier-ignore -->
-                  <article class="event-card listing__event-card">
+                  <article class="event-card ">
                     <a href="#" class="event-card__link">
 
                       <picture class="event-card__picture">
@@ -221,7 +256,7 @@
                       </picture>
 
                       <h4 class="event-card__title">
-                        Есть тема, нужно обсудить с HowStuffWorks
+                        Вечер | The Best of Sade
                       </h4>
 
                       <p class="event-card__description">
@@ -238,7 +273,7 @@
                 </div>
                 <div class="swiper-slide">
                   <!-- prettier-ignore -->
-                  <article class="event-card listing__event-card">
+                  <article class="event-card ">
                     <a href="#" class="event-card__link">
 
                       <picture class="event-card__picture">
@@ -268,6 +303,70 @@
                   </article>
 
                 </div>
+                <div class="swiper-slide">
+                  <!-- prettier-ignore -->
+                  <article class="event-card ">
+                    <a href="#" class="event-card__link">
+
+                      <picture class="event-card__picture">
+                        <source type="image/webp" media="(max-width: 669px)" srcset="assets/images/events/tatler_mobile.webp" />
+                        <source media="(max-width: 669px)" srcset="assets/images/events/tatler_mobile.png" />
+
+                        <source type="image/webp" media="(max-width: 1019px)" srcset="assets/images/events/tatler_tablet.webp" />
+                        <source media="(max-width: 1019px)" srcset="assets/images/events/tatler_tablet.png" />
+
+                        <source type="image/webp" srcset="assets/images/events/tatler.webp" />
+                        <img src="assets/images/events/tatler.png" alt="Tatler" class="event-card__img" />
+                      </picture>
+
+                      <h4 class="event-card__title">
+                        Мастер — класс по студийной съемке от Tatler
+                      </h4>
+
+                      <p class="event-card__description">
+                        Фотографы издания расскажут, как им удается создавать потрясающие кадры и что может испортить весь процесс.
+                      </p>
+
+                      <time datetime="2024-12-25T13:00" class="event-card__time">
+                        25.12.2024 | начало 13.00
+                      </time>
+
+                    </a>
+                  </article>
+
+                </div>
+                <div class="swiper-slide">
+                  <!-- prettier-ignore -->
+                  <article class="event-card ">
+                    <a href="#" class="event-card__link">
+
+                      <picture class="event-card__picture">
+                        <source type="image/webp" media="(max-width: 669px)" srcset="assets/images/events/thehatters_mobile.webp" />
+                        <source media="(max-width: 669px)" srcset="assets/images/events/thehatters_mobile.png" />
+
+                        <source type="image/webp" media="(max-width: 1019px)" srcset="assets/images/events/thehatters_tablet.webp" />
+                        <source media="(max-width: 1019px)" srcset="assets/images/events/thehatters_tablet.png" />
+
+                        <source type="image/webp" srcset="assets/images/events/thehatters.webp" />
+                        <img src="assets/images/events/thehatters.png" alt="The hatters" class="event-card__img" />
+                      </picture>
+
+                      <h4 class="event-card__title">
+                        Повесилимся на славу на концерте The Hatters
+                      </h4>
+
+                      <p class="event-card__description">
+                        Российская джипси-фолк-рок группа, основанная в 2016 году в Санкт-Петербурге.
+                      </p>
+
+                      <time datetime="2024-12-27T10:00" class="event-card__time">
+                        27.12.2024 | начало 10.00
+                      </time>
+
+                    </a>
+                  </article>
+
+                </div>
               </div>
               <footer class="swiper-footer">
                 <button type="button" class="swiper-arrow-prev arrow arrow--left">
@@ -281,7 +380,6 @@
                     <use xlink:href="assets/icons/symbols.svg#arrow"></use>
                   </svg>
                 </button>
-
               </footer>
             </div>
           </div>
@@ -290,7 +388,7 @@
 
 
       <!-- prettier-ignore -->
-      <section class="listing home__listing">
+      <section class="listing home__listing" id="blog">
         <h2 class="section-title listing__title">
           Блог
         </h2>
@@ -382,7 +480,7 @@
       </section>
 
       <!-- prettier-ignore -->
-      <section class="contacts home__contacts">
+      <section class="contacts home__contacts" id="contacts">
         <h2 class="contacts__section-title section-title">Контакты</h2>
 
         <div class="contacts__container">
@@ -396,13 +494,13 @@
 
               <div class="contacts__content">
                 <p class="contacts__content-title">
-                  Томск, Красноармейская 146
+                  г. Томск
                 </p>
 
                 <p class="contacts__content-text">
-                  2 этаж
+                  Ул. Красноармейская 146
                   <br>
-                  оф. 206
+                  2 этаж оф. 206
                 </p>
               </div>
             </article>
@@ -450,88 +548,119 @@
         </div>
       </section>
 
+      <!-- prettier-ignore -->
+      <div class="hero">
+        <div class="hero__phrase">
+          <div class="hero__row">
+            <span class="hero__line hero__line--first">
+              Просто делайте,
+            </span>
+
+            <span class="hero__line hero__line--second">
+              что нравится
+            </span>
+          </div>
+
+          <div class="hero__row-second">
+            <span class="hero__line hero__line--third">
+              а мы вам поможем
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- prettier-ignore -->
+      <footer class="footer">
+        <div class="footer__container">
+          <div class="footer__decor">
+            <span class="footer__decor-line"></span>
+            <span class="footer__decor-line"></span>
+          </div>
+          <!-- Верхняя часть футера -->
+          <div class="footer__top">
+            <!-- Навигация -->
+            <nav class="footer__nav" aria-label="Навигация в подвале">
+              <a href="#" class="footer__nav-link"> Календарь мероприятий </a>
+
+              <a href="#" class="footer__nav-link"> Провести мероприятие </a>
+
+              <a href="#" class="footer__nav-link"> Стать арендатором </a>
+
+              <a href="#" class="footer__nav-link"> Наши проекты </a>
+
+              <a href="#" class="footer__nav-link"> Контакты </a>
+            </nav>
+
+            <!-- Подписка -->
+            <div class="footer__subscribe">
+              <h4 class="footer__subscribe-title">
+                Подпишись и будь в курсе происходящего
+              </h4>
+
+              <form class="footer__form" action="https://jsonplaceholder.typicode.com/posts" id="js-subscribeForm">
+                <div class="footer__form-wrap">
+                  <input type="email" name="email" id="js-subscribeEmail" class="footer__input" placeholder="Email" aria-label="Ваш Email" required />
+
+                  <button type="submit" class="footer__button">Подписаться</button>
+                </div>
+
+                <label class="check footer__check">
+                  <input class="check__input" type="checkbox" name="personal-data" required checked />
+
+                  <span class="check__mark"></span>
+
+                  <span class="check__label">
+                    Согласен на обработку персональных данных
+                  </span>
+                </label>
+              </form>
+            </div>
+          </div>
+
+          <!-- Нижняя часть -->
+          <div class="footer__bottom">
+            <!-- Информация -->
+            <div class="footer__info">
+              <div class="footer__copyright">© Millennials 2025</div>
+
+              <div class="footer__links">
+                <a href="#" class="footer__links-policy">
+                  Политика конфиденциальности
+                </a>
+
+                <a href="#" class="footer__links-cookies"> Cookies </a>
+              </div>
+            </div>
+
+            <!-- Соцсети -->
+            <div class="footer__socials">
+              <a href="https://vk.ru/" class="footer__social">
+                <img src="assets/images/page-footer/vk.svg" alt="vk group" />
+              </a>
+
+              <a href="https://web.max.ru/" class="footer__social">
+                <img src="assets/images/page-footer/max.svg" alt="max channel" />
+              </a>
+            </div>
+
+            <!-- Разработчик -->
+            <div class="footer__developer">
+
+              <p class="footer__developer-text">Создание и продвижение</p>
+
+              <a href="https://www.dignity.codes/" class="footer__developer-logo">
+                <img src="assets/images/page-footer/logo.svg" alt="Dignity agency" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+
     </div>
 
   </main>
 
-  <footer class="footer">
-    <div class="footer__container">
-      <!-- Верхняя часть футера -->
-      <div class="footer__top">
-        <!-- Навигация -->
-        <nav class="footer__nav" aria-label="Навигация в подвале">
-          <a href="#" class="footer__nav-link"> Календарь мероприятий </a>
 
-          <a href="#" class="footer__nav-link"> Провести мероприятие </a>
-
-          <a href="#" class="footer__nav-link"> Стать арендатором </a>
-
-          <a href="#" class="footer__nav-link"> Наши проекты </a>
-
-          <a href="#" class="footer__nav-link"> Контакты </a>
-        </nav>
-
-        <!-- Подписка -->
-        <div class="footer__subscribe">
-          <p class="footer__subscribe-title">
-            Подпишись и будь в курсе происходящего
-          </p>
-
-          <form class="footer__form">
-            <input type="email" class="footer__input" placeholder="Email" aria-label="Ваш Email" />
-
-            <button type="submit" class="footer__button">Подписаться</button>
-          </form>
-
-          <label class="check footer__check">
-            <input class="check__input" type="checkbox" name="personal-data" checked />
-
-            <span class="check__mark"></span>
-
-            <span class="check__label">
-              Согласен на обработку персональных данных
-            </span>
-          </label>
-        </div>
-      </div>
-
-      <!-- Нижняя часть -->
-      <div class="footer__bottom">
-        <!-- Информация -->
-        <div class="footer__info">
-          <div class="footer__copyright">© Millennials 2025</div>
-
-          <div class="footer__links">
-            <a href="#" class="footer__links-policy">
-              Политика конфиденциальности
-            </a>
-
-            <a href="#" class="footer__links-cookies"> Cookies </a>
-          </div>
-        </div>
-
-        <!-- Соцсети -->
-        <div class="footer__socials">
-          <a href="https://vk.ru/" class="footer__social">
-            <img src="assets/images/page-footer/vk.svg" alt="vk group" />
-          </a>
-
-          <a href="https://web.max.ru/" class="footer__social">
-            <img src="assets/images/page-footer/max.svg" alt="max channel" />
-          </a>
-        </div>
-
-        <!-- Разработчик -->
-        <div class="footer__developer">
-          <p class="footer__developer-text">Создание и продвижение</p>
-
-          <a href="https://www.dignity.codes/" class="footer__developer-logo">
-            <img src="assets/images/page-footer/logo.svg" alt="Dignity agency" />
-          </a>
-        </div>
-      </div>
-    </div>
-  </footer>
 
   <div class="pp" id="js-eventPP">
     <div class="pp__wrapper">
@@ -548,7 +677,7 @@
           <br />
           и мы подберем площадку
         </h2>
-        <form class="pp__form form">
+        <form class="pp__form form" id="js-eventForm">
 
           <div class="form__list">
             <div class="field form__field form__field--w50">
@@ -671,6 +800,9 @@
   <script src="scripts/jquery.selectric.js"></script>
   <script src="scripts/jquery.mask.js"></script>
   <script src="scripts/air-datepicker.js"></script>
+  <script src="scripts/jquery.validate.js"></script>
+  <script src="scripts/jquery.validate-init.js"></script>
+
 
   <script src="scripts/swiper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/ol@v10.10.0/dist/ol.js"></script>

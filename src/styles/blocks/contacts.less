@@ -1,12 +1,23 @@
 .contacts {
+  scroll-margin-top: 150px;
+  
   .container();
+
   &__container {
-    display: grid;
-    grid-template-columns: 1fr 750px;
+    display: flex;
     gap: 115px;
-    align-items: start;
+
     @media @bw1660 {
       gap: 45px;
+    }
+
+    @media @bw1340 {
+      flex-direction: column-reverse;
+      gap: 100px;
+    }
+    
+    @media @bw600 {
+      gap: 80px;
     }
   }
 
@@ -15,8 +26,20 @@
     flex-direction: column;
     align-self: center;
     gap: 65px;
+
     @media @bw1340 {
-      gap: 50px;
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start;
+      width: 100%;
+      gap: 30px;
+    }
+    @media @bw600 {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      width: 100%;
+      gap: 30px;
     }
   }
 
@@ -26,6 +49,28 @@
     height: 110px;
     gap: 55px;
     align-items: start;
+
+    @media @bw1340 {
+      flex: 1 1 0;
+      width: 0;
+      height: auto;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 10px;
+    }
+    @media @bw600 {
+      flex: none;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 110px 1fr;
+      gap: 10px;
+    }
+    @media @bw450 {
+      grid-template-columns: 65px 1fr;
+    }
   }
 
   &__icon {
@@ -35,24 +80,57 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background: @black;
+    &-logo {
+      width: 25px;
+    }
+    @media @bw450 {
+      width: 65px;
+      height: 65px;
+    }
   }
+
 
   &__icon-logo {
     display: block;
   }
 
   &__content {
+    @media @bw1340 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+    @media @bw600 {
+      align-items: flex-start;
+      width: auto;
+      text-align: left;
+    }
+
     &-title {
       margin-top: 12px;
       margin-bottom: 10px;
       font-weight: 600;
       font-size: 20px;
+
+      @media @bw1340 {
+        margin-top: 0;
+        font-size: 18px;
+      }
+      @media @bw768 {
+        font-size: 14px;
+      }
     }
+
     &-text {
       font-size: 16px;
       font-weight: 400;
       margin-bottom: 12px;
-      margin-top: 0px;
+      margin-top: 0;
+      @media @bw1340 {
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -60,5 +138,16 @@
     width: 100%;
     max-width: 750px;
     height: 500px;
+    margin-left: auto;
+
+    @media @bw1340 {
+      margin: 0 auto 0;
+      max-width: 100vw;
+      width: 100%;
+      height: clamp(465px, calc(465px + (100vw - 768px) * 0.0516), 500px);
+    }
+    @media @bw768 {
+      height: clamp(300px, calc(300px + (100vw - 450px) * 0.5176), 465px);
+    }
   }
 }
